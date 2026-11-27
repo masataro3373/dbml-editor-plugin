@@ -1,0 +1,15 @@
+{
+  "name": "MySQL / MariaDB 方言プラグイン",
+  "description": "MySQL / MariaDB の方言定義、ENGINE/CHARSET/COLLATE メタデータ、DDLインポート/エクスポート、マイグレーションSQL生成機能を提供します。",
+  "attributes": {
+    "engine": "ストレージエンジン (ENGINE)",
+    "charset": "文字セット (CHARSET)",
+    "collate": "照合順序 (COLLATE)"
+  },
+  "migration": {
+    "title": "MySQL / MariaDB マイグレーション生成",
+    "step1": "テーブル退避・再作成スクリプト",
+    "step2": "データ移行スクリプト",
+    "step3": "インデックス・外部キー制約付与スクリプト"
+  }
+}

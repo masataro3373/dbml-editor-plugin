@@ -1,0 +1,105 @@
+// 日本語コメント: PostgreSQL 方言設定 (plugins/postgres-dialect/config.js)
+// PostgreSQL の方言仕様および物理メタデータ属性定義を提供します。
+
+export const postgresMetadataDef = {
+  projectAttributes: [
+    {
+      key: 'data_tablespaces',
+      labelKey: 'attributes.dataTablespaces',
+      hintKey: 'attributes.hintTablespaces',
+      type: 'list',
+      scope: 'dialect',
+      targetDialect: 'postgresql',
+    },
+    {
+      key: 'index_tablespaces',
+      labelKey: 'attributes.indexTablespaces',
+      hintKey: 'attributes.hintTablespaces',
+      type: 'list',
+      scope: 'dialect',
+      targetDialect: 'postgresql',
+    },
+  ],
+  tableAttributes: [
+    {
+      key: 'schema',
+      labelKey: 'attributes.schema',
+      type: 'string',
+      default: '',
+      scope: 'dialect',
+      targetDialect: 'postgresql',
+      group: 'physical',
+    },
+    {
+      key: 'tablespace',
+      labelKey: 'attributes.tablespace',
+      type: 'string',
+      default: '',
+      suggestFromProjectKey: 'data_tablespaces',
+      showBadge: true,
+      scope: 'dialect',
+      targetDialect: 'postgresql',
+      group: 'physical',
+    },
+    {
+      key: 'index_tablespace',
+      labelKey: 'attributes.indexTablespace',
+      type: 'string',
+      default: '',
+      suggestFromProjectKey: 'index_tablespaces',
+      scope: 'dialect',
+      targetDialect: 'postgresql',
+      group: 'physical',
+    },
+  ],
+  columnAttributes: [],
+};
+
+export const postgresConfig = {
+  id: 'postgresql',
+  displayName: 'PostgreSQL',
+  dbmlDatabaseType: 'PostgreSQL',
+  dbmlCoreType: 'postgres',
+  maxIdentifierLength: 63,
+  supportsIdentity: true,
+  namingRules: {
+    autoConvertUpper: false,
+  },
+  getDefaultColumnType(isPk = false) {
+    return isPk ? 'SERIAL' : 'VARCHAR(255)';
+  },
+  dataTypes: [
+    { name: 'SERIAL' },
+    { name: 'BIGSERIAL' },
+    { name: 'INTEGER' },
+    { name: 'BIGINT' },
+    { name: 'SMALLINT' },
+    { name: 'VARCHAR', hasLength: true, defaultLength: 255 },
+    { name: 'CHAR', hasLength: true, defaultLength: 1 },
+    { name: 'TEXT' },
+    { name: 'BOOLEAN' },
+    { name: 'NUMERIC', hasPrecision: true, hasScale: true },
+    { name: 'REAL' },
+    { name: 'DOUBLE PRECISION' },
+    { name: 'DATE' },
+    { name: 'TIMESTAMP', hasPrecision: true },
+    { name: 'TIMESTAMPTZ', hasPrecision: true },
+    { name: 'TIME', hasPrecision: true },
+    { name: 'BYTEA' },
+    { name: 'JSONB' },
+    { name: 'JSON' },
+    { name: 'UUID' },
+  ],
+  reservedWords: new Set([
+    'ALL', 'ANALYSE', 'ANALYZE', 'AND', 'ANY', 'ARRAY', 'AS', 'ASC', 'ASYMMETRIC',
+    'BOTH', 'CASE', 'CAST', 'CHECK', 'COLLATE', 'COLUMN', 'CONSTRAINT', 'CREATE',
+    'CURRENT_CATALOG', 'CURRENT_DATE', 'CURRENT_ROLE', 'CURRENT_TIME', 'CURRENT_TIMESTAMP',
+    'CURRENT_USER', 'DEFAULT', 'DEFERRABLE', 'DESC', 'DISTINCT', 'DO', 'ELSE', 'END',
+    'EXCEPT', 'FALSE', 'FETCH', 'FOR', 'FOREIGN', 'FROM', 'GRANT', 'GROUP', 'HAVING',
+    'IN', 'INITIALLY', 'INTERSECT', 'INTO', 'LEADING', 'LIMIT', 'LOCALTIME', 'LOCALTIMESTAMP',
+    'NOT', 'NULL', 'OFFSET', 'ON', 'ONLY', 'OR', 'ORDER', 'PLACING', 'PRIMARY',
+    'REFERENCES', 'RETURNING', 'SELECT', 'SESSION_USER', 'SOME', 'SYMMETRIC', 'TABLE',
+    'THEN', 'TO', 'TRAILING', 'TRUE', 'UNION', 'UNIQUE', 'USER', 'USING', 'VARIADIC',
+    'WHEN', 'WHERE', 'WINDOW', 'WITH',
+  ]),
+};

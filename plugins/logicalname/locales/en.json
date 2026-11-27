@@ -1,0 +1,11 @@
+{
+  "name": "Logical Name Support",
+  "description": "Enables logical name (display name) input, viewing, and DBML persistence for tables and columns.",
+  "logicalName": {
+    "table": "Table Logical Name",
+    "tablePlaceholder": "e.g. User Master",
+    "column": "Logical Name",
+    "columnPlaceholder": "Logical Name",
+    "erdModeOption": "Logical Name First"
+  }
+}

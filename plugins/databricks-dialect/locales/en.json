@@ -1,0 +1,17 @@
+{
+  "name": "Databricks SQL / Delta Lake Dialect (Beta)",
+  "description": "[Beta: Unverified on live DB] Supports Databricks SQL / Delta Lake dialect, Unity Catalog/Delta metadata, DDL import/export, and migration generator. Please verify generated SQL before production use.",
+  "attributes": {
+    "catalog": "Catalog Name (Unity Catalog)",
+    "schema": "Schema Name",
+    "using": "Table Format (USING DELTA, etc.)",
+    "partitionedBy": "Partition Columns (PARTITIONED BY)",
+    "location": "External Location (LOCATION)"
+  },
+  "migration": {
+    "title": "Databricks SQL / Delta Lake Migration Generator",
+    "step1": "Drop/Recreate Table Script",
+    "step2": "Data Copy Script",
+    "step3": "Constraints Script"
+  }
+}

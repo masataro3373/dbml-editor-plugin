@@ -1,0 +1,15 @@
+{
+  "name": "Google Cloud Spanner Dialect",
+  "description": "Supports Google Cloud Spanner dialect, INTERLEAVE/TTL metadata, DDL import/export, and migration generator.",
+  "attributes": {
+    "interleaveInParent": "Parent Table (INTERLEAVE IN PARENT)",
+    "onDeleteAction": "On Delete Action",
+    "rowDeletionPolicy": "Row Deletion Policy (TTL)"
+  },
+  "migration": {
+    "title": "Google Cloud Spanner Migration Generator",
+    "step1": "Create/Alter Table Script",
+    "step2": "Indexes Script",
+    "step3": "Constraints Script"
+  }
+}

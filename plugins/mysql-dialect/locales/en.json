@@ -1,0 +1,15 @@
+{
+  "name": "MySQL / MariaDB Dialect",
+  "description": "Supports MySQL / MariaDB dialect, ENGINE/CHARSET/COLLATE metadata, DDL import/export, and migration generator.",
+  "attributes": {
+    "engine": "Storage Engine (ENGINE)",
+    "charset": "Character Set (CHARSET)",
+    "collate": "Collation (COLLATE)"
+  },
+  "migration": {
+    "title": "MySQL / MariaDB Migration Generator",
+    "step1": "Drop/Recreate Table Script",
+    "step2": "Data Copy Script",
+    "step3": "Indexes and Foreign Keys Script"
+  }
+}

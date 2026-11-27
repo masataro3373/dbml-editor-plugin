@@ -1,0 +1,10 @@
+# 依存関係
+node_modules/
+
+# 環境変数・ログ・一時ファイル
+.env
+.env.*
+*.log
+*.bak
+.DS_Store
+Thumbs.db

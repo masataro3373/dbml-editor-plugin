@@ -1,0 +1,11 @@
+{
+  "id": "logicalname",
+  "name": "Logical Name Support",
+  "nameKey": "plugins.logicalname.name",
+  "version": "1.0.0",
+  "description": "Enables logical name input, display, and DBML persistence for tables and columns.",
+  "author": "Official",
+  "entry": "index.js",
+  "capabilities": ["metadata"],
+  "requires": []
+}

@@ -1,0 +1,12 @@
+{
+  "id": "oracle-dialect",
+  "name": "Oracle Database Dialect",
+  "nameKey": "plugins.oracle-dialect.name",
+  "version": "1.0.0",
+  "description": "Oracle Database (12c+ / 11g) dialect, physical tablespaces, DDL import/export, and migration generator.",
+  "author": "Official",
+  "entry": "index.js",
+  "capabilities": ["dialect", "metadata", "importer", "exporter", "migration"],
+  "requires": ["ejs"]
+}
+

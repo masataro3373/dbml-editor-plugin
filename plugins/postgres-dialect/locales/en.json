@@ -1,0 +1,18 @@
+{
+  "name": "PostgreSQL Dialect",
+  "description": "Supports PostgreSQL dialect, schema/tablespace metadata, DDL import/export, and migration generator.",
+  "attributes": {
+    "dataTablespaces": "Data Tablespaces",
+    "indexTablespaces": "Index Tablespaces",
+    "hintTablespaces": "Comma-separated list of tablespace names (e.g. pg_default, app_data)",
+    "tablespace": "Table Tablespace",
+    "indexTablespace": "Index Tablespace",
+    "schema": "Schema Name"
+  },
+  "migration": {
+    "title": "PostgreSQL Migration Generator",
+    "step1": "Drop/Recreate Table Script",
+    "step2": "Data Copy Script",
+    "step3": "Indexes, Constraints, and Comments Script"
+  }
+}

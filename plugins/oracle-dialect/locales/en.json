@@ -1,0 +1,27 @@
+{
+  "name": "Oracle Database Dialect",
+  "description": "Supports Oracle Database (12c+ / 11g) dialect, physical tablespaces, DDL import/export, and migration generator.",
+  "oracle12c": "Oracle (12c+)",
+  "oracle11g": "Oracle (<= 11g)",
+  "attributes": {
+    "tableType": "Table Type",
+    "onCommit": "On Commit Action",
+    "dataTablespaces": "Data Tablespaces",
+    "indexTablespaces": "Index Tablespaces",
+    "lobTablespaces": "LOB Tablespaces",
+    "hintTablespaces": "Comma separated list of tablespace names",
+    "tablespace": "Tablespace (TABLESPACE)",
+    "indexTablespace": "Index Tablespace (INDEX TABLESPACE)",
+    "lobTablespace": "LOB Tablespace (LOB TABLESPACE)",
+    "pctfree": "PCTFREE",
+    "initrans": "INITRANS",
+    "logging": "LOGGING"
+  },
+  "migration": {
+    "title": "Oracle Migration Generator",
+    "step1": "Drop/Recreate Table Script",
+    "step2": "Data Copy Script",
+    "step3": "Indexes and Constraints Script"
+  }
+}
+

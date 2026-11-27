@@ -1,0 +1,27 @@
+{
+  "name": "ER/Studio Excel Design Sheet Plugin",
+  "description": "Enables logicalName, ER/Studio design attributes, and 25-column Excel importer with smart merge.",
+  "importerTitle": "Design Sheet (Excel)",
+  "logicalName": {
+    "table": "Table Logical Name",
+    "tablePlaceholder": "e.g. User Master",
+    "column": "Logical Name",
+    "columnPlaceholder": "Logical Name",
+    "erdModeOption": "Logical Name First"
+  },
+  "tableAttrs": {
+    "definition": "Entity Definition",
+    "entityNote": "Entity Note",
+    "remarks": "Remarks"
+  },
+  "colAttrs": {
+    "definition": "Attribute Definition",
+    "columnNote": "Column Note",
+    "domainName": "Domain Name",
+    "defaultName": "Default Constraint Name",
+    "lookupName": "Lookup Code Name",
+    "ruleName": "Validation Rule Name",
+    "checkRule": "Check Constraint / Rule",
+    "remarks": "Remarks"
+  }
+}

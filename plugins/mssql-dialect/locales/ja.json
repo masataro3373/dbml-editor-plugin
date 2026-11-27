@@ -1,0 +1,14 @@
+{
+  "name": "SQL Server / MS-SQL 方言プラグイン",
+  "description": "Microsoft SQL Server (T-SQL) の方言定義、スキーマ/ファイルグループメタデータ、DDLインポート/エクスポート、マイグレーションSQL生成機能を提供します。",
+  "attributes": {
+    "schema": "スキーマ名 (例: dbo)",
+    "filegroup": "ファイルグループ (ON [PRIMARY] 等)"
+  },
+  "migration": {
+    "title": "SQL Server / MS-SQL マイグレーション生成",
+    "step1": "テーブル退避・再作成スクリプト",
+    "step2": "データ移行スクリプト",
+    "step3": "インデックス・外部キー・コメント付与スクリプト"
+  }
+}

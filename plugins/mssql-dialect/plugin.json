@@ -1,0 +1,11 @@
+{
+  "id": "mssql-dialect",
+  "name": "SQL Server / MS-SQL Dialect",
+  "nameKey": "plugins.mssql-dialect.name",
+  "version": "1.0.0",
+  "description": "Microsoft SQL Server dialect, schema/filegroup metadata, T-SQL DDL import/export, and migration generator.",
+  "author": "Official",
+  "entry": "index.js",
+  "capabilities": ["dialect", "metadata", "importer", "exporter", "migration"],
+  "requires": ["ejs"]
+}

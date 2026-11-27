@@ -1,0 +1,11 @@
+{
+  "id": "mysql-dialect",
+  "name": "MySQL / MariaDB Dialect",
+  "nameKey": "plugins.mysql-dialect.name",
+  "version": "1.0.0",
+  "description": "MySQL / MariaDB dialect, storage engine/charset metadata, DDL import/export, and migration generator.",
+  "author": "Official",
+  "entry": "index.js",
+  "capabilities": ["dialect", "metadata", "importer", "exporter", "migration"],
+  "requires": ["ejs"]
+}

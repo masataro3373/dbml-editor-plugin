@@ -1,0 +1,12 @@
+{
+  "id": "erstudio-excel",
+  "name": "ER/Studio Excel Design Sheet Plugin",
+  "nameKey": "plugins.erstudio-excel.name",
+  "version": "1.0.0",
+  "description": "Enables logicalName, ER/Studio design attributes, and 25-column Excel importer with smart merge.",
+  "author": "Official",
+  "entry": "index.js",
+  "capabilities": ["importer", "metadata"],
+  "requires": ["xlsx"]
+}
+

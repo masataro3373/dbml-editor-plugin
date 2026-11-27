@@ -1,0 +1,27 @@
+{
+  "name": "Oracle Database 方言プラグイン",
+  "description": "Oracle Database (12c+ / 11g) の方言定義、物理表領域メタデータ、DDLインポート/エクスポート、マイグレーションSQL生成機能を提供します。",
+  "oracle12c": "Oracle (12c+)",
+  "oracle11g": "Oracle (<= 11g)",
+  "attributes": {
+    "tableType": "テーブル種別 (TABLE TYPE)",
+    "onCommit": "コミット時動作 (ON COMMIT)",
+    "dataTablespaces": "データ表領域 (TABLESPACES)",
+    "indexTablespaces": "インデックス表領域 (INDEX TABLESPACES)",
+    "lobTablespaces": "LOB表領域 (LOB TABLESPACES)",
+    "hintTablespaces": "表領域名のカンマ区切りリスト (例: USERS, APP_DATA)",
+    "tablespace": "データ表領域 (TABLESPACE)",
+    "indexTablespace": "インデックス表領域 (INDEX TABLESPACE)",
+    "lobTablespace": "LOB表領域 (LOB TABLESPACE)",
+    "pctfree": "PCTFREE",
+    "initrans": "INITRANS",
+    "logging": "REDOログ出力 (LOGGING)"
+  },
+  "migration": {
+    "title": "Oracle マイグレーション生成",
+    "step1": "テーブル退避・再作成スクリプト",
+    "step2": "データ移行スクリプト",
+    "step3": "インデックス・制約付与スクリプト"
+  }
+}
+

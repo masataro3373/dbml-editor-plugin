@@ -1,0 +1,11 @@
+{
+  "name": "論理名サポート (Logical Name)",
+  "description": "テーブルおよびカラムの論理名（日本語和名）の入力・表示・DBML保存を有効化します。",
+  "logicalName": {
+    "table": "テーブル論理名",
+    "tablePlaceholder": "例: ユーザーマスタ",
+    "column": "論理名",
+    "columnPlaceholder": "論理名",
+    "erdModeOption": "論理名（和名）優先"
+  }
+}

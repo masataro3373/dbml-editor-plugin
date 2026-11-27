@@ -1,0 +1,17 @@
+# 日本語コメント: PostgreSQL 実機検証用 省メモリ Docker Compose
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: dbml-verify-postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: verifypass
+      POSTGRES_DB: verifydb
+    ports:
+      - "15432:5432"
+    mem_limit: 256m
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d verifydb"]
+      interval: 5s
+      timeout: 3s
+      retries: 10

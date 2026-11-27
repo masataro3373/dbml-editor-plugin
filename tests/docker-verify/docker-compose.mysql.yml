@@ -1,0 +1,21 @@
+# 日本語コメント: MySQL 実機検証用 省メモリ Docker Compose
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: dbml-verify-mysql
+    command:
+      - --innodb-buffer-pool-size=64M
+      - --performance-schema=OFF
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_unicode_ci
+    environment:
+      MYSQL_ROOT_PASSWORD: verifypass
+      MYSQL_DATABASE: verifydb
+    ports:
+      - "13306:3306"
+    mem_limit: 512m
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-pverifypass"]
+      interval: 5s
+      timeout: 5s
+      retries: 15

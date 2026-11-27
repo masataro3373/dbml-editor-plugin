@@ -1,0 +1,12 @@
+# 日本語コメント: SQL Server (Express) 実機検証用 省メモリ Docker Compose
+services:
+  mssql:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: dbml-verify-mssql
+    environment:
+      ACCEPT_EULA: "Y"
+      MSSQL_SA_PASSWORD: "VerifyPass123!"
+      MSSQL_PID: "Express"
+    ports:
+      - "11433:1433"
+    mem_limit: 2g

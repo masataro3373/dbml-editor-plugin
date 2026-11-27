@@ -1,0 +1,17 @@
+{
+  "name": "Databricks SQL / Delta Lake 方言プラグイン (Beta)",
+  "description": "[Beta: 実機未検証] Databricks SQL / Delta Lake の方言定義、Unity Catalog/USING/PARTITIONED BY/LOCATION メタデータ、DDLインポート/エクスポート、マイグレーションSQL生成機能を提供します（出力SQLは実環境で確認のうえご利用ください）。",
+  "attributes": {
+    "catalog": "カタログ名 (Unity Catalog)",
+    "schema": "スキーマ名 (Schema / Database)",
+    "using": "テーブル形式 (USING DELTA 等)",
+    "partitionedBy": "パーティション列 (PARTITIONED BY)",
+    "location": "外部ロケーション (LOCATION)"
+  },
+  "migration": {
+    "title": "Databricks SQL / Delta Lake マイグレーション生成",
+    "step1": "テーブル退避・再作成スクリプト",
+    "step2": "データ移行スクリプト",
+    "step3": "外部キー制約付与スクリプト"
+  }
+}

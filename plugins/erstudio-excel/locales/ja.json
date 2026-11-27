@@ -1,0 +1,27 @@
+{
+  "name": "ER/Studio Excel 設計書プラグイン",
+  "description": "テーブル・カラムの「論理名 (logicalName)」の有効化、ER/Studio 準拠の設計メタデータ属性（全11項目）、および 25列 Excel 設計書インポーター（スマートマージ機能付き）を提供します。",
+  "importerTitle": "設計書 (Excel)",
+  "logicalName": {
+    "table": "テーブル論理名",
+    "tablePlaceholder": "例: ユーザーマスタ",
+    "column": "論理名",
+    "columnPlaceholder": "論理名",
+    "erdModeOption": "論理名（和名）優先"
+  },
+  "tableAttrs": {
+    "definition": "エンティティ定義",
+    "entityNote": "エンティティノート",
+    "remarks": "備考"
+  },
+  "colAttrs": {
+    "definition": "属性定義",
+    "columnNote": "カラムノート",
+    "domainName": "ドメイン名",
+    "defaultName": "デフォルト名",
+    "lookupName": "ルックアップ名",
+    "ruleName": "ルール名",
+    "checkRule": "チェックルール / 制約",
+    "remarks": "備考"
+  }
+}

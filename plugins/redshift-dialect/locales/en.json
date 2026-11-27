@@ -1,0 +1,16 @@
+{
+  "name": "Amazon Redshift Dialect (Beta)",
+  "description": "[Beta: Unverified on live DB] Supports Amazon Redshift dialect, DISTSTYLE/DISTKEY/SORTKEY metadata, DDL import/export, and migration generator. Please verify generated SQL before production use.",
+  "attributes": {
+    "schema": "Schema Name (e.g. public)",
+    "diststyle": "Distribution Style (DISTSTYLE)",
+    "distkey": "Distribution Key (DISTKEY)",
+    "sortkey": "Sort Key (SORTKEY)"
+  },
+  "migration": {
+    "title": "Amazon Redshift Migration Generator",
+    "step1": "Drop/Recreate Table Script",
+    "step2": "Data Copy Script",
+    "step3": "Constraints and Comments Script"
+  }
+}

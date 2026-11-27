@@ -1,0 +1,102 @@
+// 日本語コメント: Databricks SQL / Delta Lake 方言設定 (plugins/databricks-dialect/config.js)
+
+export const databricksMetadataDef = {
+  projectAttributes: [],
+  tableAttributes: [
+    {
+      key: 'catalog',
+      labelKey: 'attributes.catalog',
+      type: 'string',
+      default: '',
+      scope: 'dialect',
+      targetDialect: 'databricks',
+      group: 'physical',
+    },
+    {
+      key: 'schema',
+      labelKey: 'attributes.schema',
+      type: 'string',
+      default: 'default',
+      scope: 'dialect',
+      targetDialect: 'databricks',
+      group: 'physical',
+    },
+    {
+      key: 'using',
+      labelKey: 'attributes.using',
+      type: 'select',
+      options: [
+        { label: 'DELTA (デフォルト)', value: 'DELTA' },
+        { label: 'PARQUET', value: 'PARQUET' },
+        { label: 'ORC', value: 'ORC' },
+      ],
+      default: 'DELTA',
+      scope: 'dialect',
+      targetDialect: 'databricks',
+      group: 'physical',
+    },
+    {
+      key: 'partitioned_by',
+      labelKey: 'attributes.partitionedBy',
+      type: 'string',
+      default: '',
+      scope: 'dialect',
+      targetDialect: 'databricks',
+      group: 'physical',
+    },
+    {
+      key: 'location',
+      labelKey: 'attributes.location',
+      type: 'string',
+      default: '',
+      scope: 'dialect',
+      targetDialect: 'databricks',
+      group: 'physical',
+    },
+  ],
+  columnAttributes: [],
+};
+
+export const databricksConfig = {
+  id: 'databricks',
+  displayName: 'Databricks SQL / Delta Lake',
+  dbmlDatabaseType: 'Databricks',
+  dbmlCoreType: 'mysql',
+  maxIdentifierLength: 255,
+  supportsIdentity: true,
+  namingRules: {
+    autoConvertUpper: false,
+  },
+  getDefaultColumnType(isPk = false) {
+    return isPk ? 'BIGINT' : 'STRING';
+  },
+  dataTypes: [
+    { name: 'TINYINT' },
+    { name: 'SMALLINT' },
+    { name: 'INT' },
+    { name: 'BIGINT' },
+    { name: 'FLOAT' },
+    { name: 'DOUBLE' },
+    { name: 'DECIMAL', hasPrecision: true, hasScale: true },
+    { name: 'BOOLEAN' },
+    { name: 'STRING' },
+    { name: 'BINARY' },
+    { name: 'DATE' },
+    { name: 'TIMESTAMP' },
+    { name: 'TIMESTAMP_NTZ' },
+    { name: 'ARRAY<STRING>' },
+    { name: 'MAP<STRING, STRING>' },
+  ],
+  reservedWords: new Set([
+    'ALL', 'ALTER', 'AND', 'ANTI', 'ANY', 'ARRAY', 'AS', 'AT', 'BETWEEN', 'BY', 'CASE',
+    'CAST', 'CHECK', 'COLLATE', 'COLUMN', 'CONSTRAINT', 'CREATE', 'CROSS', 'CUBE',
+    'CURRENT_DATE', 'CURRENT_TIMESTAMP', 'CURRENT_USER', 'DEFAULT', 'DELETE', 'DESC',
+    'DISTINCT', 'DROP', 'ELSE', 'END', 'EXCEPT', 'EXISTS', 'FALSE', 'FETCH', 'FOR',
+    'FOREIGN', 'FROM', 'FULL', 'GRANT', 'GROUP', 'GROUPING', 'HAVING', 'IF', 'IN',
+    'INNER', 'INSERT', 'INTERSECT', 'INTO', 'IS', 'JOIN', 'LATERAL', 'LEFT', 'LIKE',
+    'LIMIT', 'NATURAL', 'NOT', 'NULL', 'OF', 'ON', 'OR', 'ORDER', 'OUTER', 'OVER',
+    'PARTITION', 'PRIMARY', 'REFERENCES', 'RIGHT', 'ROLLUP', 'SELECT', 'SEMI', 'SET',
+    'SOME', 'STRUCT', 'TABLE', 'TABLESAMPLE', 'THEN', 'TO', 'TRUE', 'UNION', 'UNIQUE',
+    'UPDATE', 'USING', 'VALUES', 'VIEW', 'WHEN', 'WHERE', 'WINDOW', 'WITH',
+  ]),
+};

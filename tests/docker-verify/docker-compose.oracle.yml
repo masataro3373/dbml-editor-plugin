@@ -1,0 +1,17 @@
+# 日本語コメント: Oracle 23 Free 実機検証用 省メモリ Docker Compose
+services:
+  oracle:
+    image: gvenzl/oracle-free:23-slim-faststart
+    container_name: dbml-verify-oracle
+    environment:
+      ORACLE_PASSWORD: verifypass
+      APP_USER: verifyuser
+      APP_USER_PASSWORD: verifypass
+    ports:
+      - "11521:1521"
+    mem_limit: 2g
+    healthcheck:
+      test: ["CMD", "healthcheck.sh"]
+      interval: 10s
+      timeout: 5s
+      retries: 15

@@ -1,0 +1,16 @@
+{
+  "name": "Amazon Redshift 方言プラグイン (Beta)",
+  "description": "[Beta: 実機未検証] Amazon Redshift の方言定義、スキーマ/DISTSTYLE/DISTKEY/SORTKEY メタデータ、DDLインポート/エクスポート、マイグレーションSQL生成機能を提供します（出力SQLは実環境で確認のうえご利用ください）。",
+  "attributes": {
+    "schema": "スキーマ名 (例: public)",
+    "diststyle": "分散スタイル (DISTSTYLE)",
+    "distkey": "分散キー (DISTKEY)",
+    "sortkey": "ソートキー (SORTKEY)"
+  },
+  "migration": {
+    "title": "Amazon Redshift マイグレーション生成",
+    "step1": "テーブル退避・再作成スクリプト",
+    "step2": "データ移行スクリプト",
+    "step3": "外部キー制約・コメント付与スクリプト"
+  }
+}

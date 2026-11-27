@@ -1,0 +1,11 @@
+{
+  "id": "bigquery-dialect",
+  "name": "Google BigQuery Dialect",
+  "nameKey": "plugins.bigquery-dialect.name",
+  "version": "1.0.0-beta",
+  "description": "Google BigQuery dialect, dataset/partition/cluster metadata, DDL import/export, and migration generator.",
+  "author": "Official",
+  "entry": "index.js",
+  "capabilities": ["dialect", "metadata", "importer", "exporter", "migration"],
+  "requires": ["ejs"]
+}

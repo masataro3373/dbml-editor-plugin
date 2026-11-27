@@ -1,0 +1,15 @@
+{
+  "name": "Google Cloud Spanner 方言プラグイン",
+  "description": "Google Cloud Spanner (GoogleSQL) の方言定義、INTERLEAVE/TTL メタデータ、DDLインポート/エクスポート、マイグレーションSQL生成機能を提供します。",
+  "attributes": {
+    "interleaveInParent": "親テーブル (INTERLEAVE IN PARENT)",
+    "onDeleteAction": "親削除時動作 (ON DELETE)",
+    "rowDeletionPolicy": "TTL行削除ポリシー (ROW DELETION POLICY)"
+  },
+  "migration": {
+    "title": "Google Cloud Spanner マイグレーション生成",
+    "step1": "テーブル作成・変更スクリプト",
+    "step2": "インデックス付与スクリプト",
+    "step3": "外部キー制約付与スクリプト"
+  }
+}

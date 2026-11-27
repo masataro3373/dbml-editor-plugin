@@ -1,0 +1,11 @@
+{
+  "id": "databricks-dialect",
+  "name": "Databricks SQL / Delta Lake Dialect",
+  "nameKey": "plugins.databricks-dialect.name",
+  "version": "1.0.0-beta",
+  "description": "Databricks SQL / Delta Lake dialect, Unity Catalog/Delta metadata, DDL import/export, and migration generator.",
+  "author": "Official",
+  "entry": "index.js",
+  "capabilities": ["dialect", "metadata", "importer", "exporter", "migration"],
+  "requires": ["ejs"]
+}

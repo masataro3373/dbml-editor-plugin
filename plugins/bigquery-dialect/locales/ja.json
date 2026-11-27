@@ -1,0 +1,15 @@
+{
+  "name": "Google BigQuery 方言プラグイン (Beta)",
+  "description": "[Beta: 実機未検証] Google BigQuery の方言定義、データセット/パーティション/クラスタリングメタデータ、DDLインポート/エクスポート、マイグレーションSQL生成機能を提供します（出力SQLは実環境で確認のうえご利用ください）。",
+  "attributes": {
+    "dataset": "データセット名 (Dataset)",
+    "partitionBy": "パーティション式 (PARTITION BY)",
+    "clusterBy": "クラスタリング列 (CLUSTER BY)"
+  },
+  "migration": {
+    "title": "Google BigQuery マイグレーション生成",
+    "step1": "テーブル退避・再作成スクリプト",
+    "step2": "データ移行スクリプト",
+    "step3": "外部キー制約付与スクリプト"
+  }
+}

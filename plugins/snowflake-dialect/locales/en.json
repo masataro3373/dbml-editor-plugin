@@ -1,0 +1,15 @@
+{
+  "name": "Snowflake Dialect (Beta)",
+  "description": "[Beta: Unverified on live DB] Supports Snowflake dialect, clustering/retention metadata, DDL import/export, and migration generator. Please verify generated SQL before production use.",
+  "attributes": {
+    "schema": "Schema Name (e.g. PUBLIC)",
+    "clusterBy": "Clustering Key (CLUSTER BY)",
+    "dataRetention": "Data Retention Days (DATA_RETENTION_TIME_IN_DAYS)"
+  },
+  "migration": {
+    "title": "Snowflake Migration Generator",
+    "step1": "Drop/Recreate Table Script",
+    "step2": "Data Copy Script",
+    "step3": "Constraints Script"
+  }
+}

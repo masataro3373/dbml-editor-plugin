@@ -1,0 +1,14 @@
+{
+  "name": "SQL Server / MS-SQL Dialect",
+  "description": "Supports Microsoft SQL Server dialect, schema/filegroup metadata, T-SQL DDL import/export, and migration generator.",
+  "attributes": {
+    "schema": "Schema Name (e.g. dbo)",
+    "filegroup": "Filegroup (e.g. PRIMARY)"
+  },
+  "migration": {
+    "title": "SQL Server / MS-SQL Migration Generator",
+    "step1": "Drop/Recreate Table Script",
+    "step2": "Data Copy Script",
+    "step3": "Indexes, Constraints, and Extended Properties Script"
+  }
+}

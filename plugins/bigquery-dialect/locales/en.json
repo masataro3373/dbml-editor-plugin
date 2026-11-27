@@ -1,0 +1,15 @@
+{
+  "name": "Google BigQuery Dialect (Beta)",
+  "description": "[Beta: Unverified on live DB] Supports Google BigQuery dialect, dataset/partitioning/clustering metadata, DDL import/export, and migration generator. Please verify generated SQL before production use.",
+  "attributes": {
+    "dataset": "Dataset Name",
+    "partitionBy": "Partition Expression (PARTITION BY)",
+    "clusterBy": "Clustering Columns (CLUSTER BY)"
+  },
+  "migration": {
+    "title": "Google BigQuery Migration Generator",
+    "step1": "Drop/Recreate Table Script",
+    "step2": "Data Copy Script",
+    "step3": "Constraints Script"
+  }
+}

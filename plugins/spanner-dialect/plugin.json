@@ -1,0 +1,11 @@
+{
+  "id": "spanner-dialect",
+  "name": "Google Cloud Spanner Dialect",
+  "nameKey": "plugins.spanner-dialect.name",
+  "version": "1.0.0",
+  "description": "Google Cloud Spanner (GoogleSQL) dialect, INTERLEAVE metadata, DDL import/export, and migration generator.",
+  "author": "Official",
+  "entry": "index.js",
+  "capabilities": ["dialect", "metadata", "importer", "exporter", "migration"],
+  "requires": ["ejs"]
+}

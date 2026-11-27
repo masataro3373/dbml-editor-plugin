@@ -1,0 +1,15 @@
+{
+  "name": "Snowflake 方言プラグイン (Beta)",
+  "description": "[Beta: 実機未検証] Snowflake の方言定義、スキーマ/クラスタリングキー/データ保持日数メタデータ、DDLインポート/エクスポート、マイグレーションSQL生成機能を提供します（出力SQLは実環境で確認のうえご利用ください）。",
+  "attributes": {
+    "schema": "スキーマ名 (例: PUBLIC)",
+    "clusterBy": "クラスタリングキー (CLUSTER BY)",
+    "dataRetention": "データ保持日数 (DATA_RETENTION_TIME_IN_DAYS)"
+  },
+  "migration": {
+    "title": "Snowflake マイグレーション生成",
+    "step1": "テーブル退避・再作成スクリプト",
+    "step2": "データ移行スクリプト",
+    "step3": "外部キー制約付与スクリプト"
+  }
+}
